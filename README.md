@@ -11,7 +11,7 @@ AHPy requires [Python 3.7+](https://www.python.org/), as well as [numpy](https:/
 
 ## Table of Contents
 
-[Purchasing mobie](#Ví dụ môn cô nga)
+[Purchasing mobie] (#Ví-dụ-môn-cô-nga)
 
 ## Ví dụ môn cô nga (Purchasing mobie)
 
