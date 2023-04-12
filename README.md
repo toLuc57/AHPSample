@@ -11,23 +11,37 @@ AHPy requires [Python 3.7+](https://www.python.org/), as well as [numpy](https:/
 
 ## Table of Contents
 
-[Purchasing mobie](#ví-dụ-môn-cô-nga-purchasing-mobie)
+[Use AHPy](#sử-dụng-ahpy)
+[Purchasing car](#purchasing-car)
 
-## Ví dụ môn cô nga (Purchasing mobie)
+## Sử dụng ahpy
 
-### Tính độ ưu tiên của các phương án theo từng tiêu chí (B3)
+![Sample](img/1647595095232.png "How to make matrix input")
 
-|Price|Mobie1|Mobie2|Mobie3|
-|-|:-:|:-:|:-:|
-|Mobie1|1|3/2|4/3|
-|Mobie2|2/3|1|3/2|
-|Mobie3|3/4|3/2|1|
- 
- Tương tự với các tiêu chí khác - Storage, Camera, Look.
- 
- ### Tính toán trọng số của từng tiêu chí
- 
- Tương tự với tính độ ưu tiên của các phương án theo từng tiêu chí 
- 
+### Nhập ma trận
 
- 
+Theo như trong hình, ta chỉ cần nhập lần lượt w1, w2, ..., wn. 
+
+Ví dụ như ở dưới hình này
+
+![Image about matrix](img/AHP_TDHCharismaMatrixWPriorities.png "Criteria of lead example")
+
+Thì câu lệnh nhập trong ahpy như sau:
+
+```python
+>>> criteria_comparisons = {('Experience', 'Education'): 4, ('Experience', 'Charisma'): 3, ('Experience', 'Age'): 7,
+			    ('Education', 'Charisma'): 1/3, ('Education', 'Age'): 3,
+			    ('Charisma', 'Age'): 5}
+```
+### Kết quả
+
+Câu lệnh trong python in ra kết quả.
+
+```python
+>>> criterial = ahpy.Compare('Criteria', criterial_comparisons, precision=3)
+>>> report = criterial.report(show=True)
+```
+
+## Purchasing car
+
+ [Nguồn sưu tập trên wiki](https://en.wikipedia.org/wiki/Analytic_hierarchy_process_%E2%80%93_car_example)
