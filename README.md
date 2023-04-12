@@ -24,7 +24,7 @@ Theo như trong hình, ta chỉ cần nhập lần lượt w1, w2, ..., wn.
 
 Ví dụ như ở dưới hình này
 
-![Image about matrix](img/AHP_TDHCharismaMatrixWPriorities.png "Criteria of lead example")
+![Image about matrix](img/AHP_TDHCriteriaGrid.png "Criteria of lead example")
 
 Thì câu lệnh nhập trong ahpy như sau:
 
