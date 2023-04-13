@@ -15,14 +15,15 @@ AHPy requires [Python 3.7+](https://www.python.org/), as well as [numpy](https:/
 
 [Purchasing car](#purchasing-car)
 
+[Dịch não tuỷ (folder `test`)](#dịch-não-tuỷ-folder-test)
+
 ## Sử dụng ahpy
 
 ![Sample](img/1647595095232.png "How to make matrix input")
 
 ### Nhập ma trận
 
-Theo như trong hình, ta chỉ cần nhập lần lượt w1, w2, ..., wn. 
-
+Theo như trong hình, ta chỉ cần nhập lần lượt w1, w2, ..., wn.
 Ví dụ như ở dưới hình này
 
 ![Image about matrix](img/AHP_TDHCriteriaGrid.png "Criteria of lead example")
@@ -46,3 +47,19 @@ Câu lệnh trong python in ra kết quả.
 ## Purchasing car
 
  [Nguồn sưu tập trên wiki](https://en.wikipedia.org/wiki/Analytic_hierarchy_process_%E2%80%93_car_example)
+
+ ## Dịch não tuỷ (folder `test`)
+
+ ### Database (SQLite3)
+
+Sử dụng mô hình EAV để lưu data
+
+ ![Image about Entity Relationship Diagram](img/EAV_diagram.png "Entity Relationship Diagram of sicks")
+
+### Hướng dẫn chạy
+
+Đầu tiên chạy file `./test/sqlite3/init.py` để tạo table `sicks`, `criteria` và `criteria_value` - nếu chưa có file `tutorial.db`.
+Có một vài mẫu query truy vấn trong `./test/sqlite3/query.py`
+
+
+
