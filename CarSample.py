@@ -3,6 +3,9 @@ import pytest
 import matplotlib.pyplot as plt
 from ahpy import ahpy
 
+def weight_calculation(vehicle_pairs):
+	
+
 criteria_comparisons = {('Cost', 'Safety'): 3, ('Cost', 'Style'): 7, ('Cost', 'Capacity'): 3,
 			    ('Safety', 'Style'): 9, ('Safety', 'Capacity'): 1,
 			    ('Style', 'Capacity'): 1/7}

@@ -16,4 +16,11 @@ for row in res:
     print(row)
 print("---------------------------")
 
+res = cur.execute("SELECT * FROM criteria_values")
+print("------criteria_values-------")
+for row in res:
+    print(row)
+print("---------------------------")
+
+
 con.close()
