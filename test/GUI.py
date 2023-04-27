@@ -18,7 +18,7 @@ txt_bach_cau.grid(column=1, row=1)
 cm_tb_uu_the = Combobox(window)
 cm_tb_uu_the['values']= ("Bạch cầu Lympho (L)", "Bạch cầu đa nhân trung tính (PMN)")
 cm_tb_uu_the.grid(column=1, row=2)
-cm_tb_uu_the.current(1)
+cm_tb_uu_the.current(0)
 tb_uu_the = Label(window, text="Bạch cầu/microL: ")
 tb_uu_the.grid(column=0, row=2)
 
@@ -33,23 +33,23 @@ protein.grid(column=0, row=4)
 txt_protein = Entry(window)
 txt_protein.grid(column=1, row=4)
 
-txt_result = Label(window, text="Kết quả: ")
-txt_result.grid(column=0,row=6)
+lb_result = Label(window, text="Kết quả: ")
+lb_result.grid(column=0,row=6)
 txt_result = Label(window, text="")
 txt_result.grid(column=1,row=6)
 
 txt_ap_luc.focus()
 
 def clicked():
-    ap_luc_nb = float(ap_luc.get())
-    bach_cau_nb = float(bach_cau.get())
-    tb_uu_the_str = float(tb_uu_the.get())
-    glucose_nb = float(glucose.get())
-    protein_nb = float(protein.get())
+    ap_luc_nb = float(txt_ap_luc.get())
+    bach_cau_nb = float(txt_bach_cau.get())
+    tb_uu_the_str = float(cm_tb_uu_the.current())
+    glucose_nb = float(txt_glucose.get())
+    protein_nb = float(txt_protein.get())
     res = (ap_luc_nb + bach_cau_nb + protein_nb + glucose_nb)/4
-    result.configure(text= res)
+    txt_result.configure(text= res)
 
 btn = Button(window, text="Tính toán", command=clicked)
 btn.grid(column=1, row=5)
 
-window.mainloop()
+window.mainloop()  

@@ -3,9 +3,6 @@ import pytest
 import matplotlib.pyplot as plt
 from ahpy import ahpy
 
-def weight_calculation(vehicle_pairs):
-	
-
 criteria_comparisons = {('Cost', 'Safety'): 3, ('Cost', 'Style'): 7, ('Cost', 'Capacity'): 3,
 			    ('Safety', 'Style'): 9, ('Safety', 'Capacity'): 1,
 			    ('Style', 'Capacity'): 1/7}
@@ -60,7 +57,7 @@ cost.add_children([price, fuel, maintenance, resale])
 capacity.add_children([cargo, passenger])
 criteria.add_children([cost, safety, style, capacity])
 
-report = price.report(show=True)
+report = criteria.report(show=True)
 # output_keys = [key for key in criteria.target_weights]
 # output_values = [criteria.target_weights[key] for key in criteria.target_weights]
 # plt.figure(figsize=(6, 3))

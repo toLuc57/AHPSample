@@ -13,10 +13,10 @@ res.fetchone() is None
 # True
 cur.execute("CREATE TABLE sicks(id, name)")
 
-data = [(1, 'Bình thường' ),
-        (2, 'Viêm màng não cấp do vi khuẩn'),
-        (3, 'Viêm màng não bán cấp và mạn tính'),
-        (4, 'Viêm não tự miễn')
+data = [(1, 'binh-thuong' ),
+        (2, 'viem-mang-nao-cap-do-vi-khuan'),
+        (3, 'viem-mang-nao-ban-cap-va-man-tinh'),
+        (4, 'viem-nao-tu-mien')
 ]
 
 cur.executemany("INSERT INTO sicks VALUES (?,?)", data)

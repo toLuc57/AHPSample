@@ -46,20 +46,24 @@ Câu lệnh trong python in ra kết quả.
 
 ## Purchasing car
 
- [Nguồn sưu tập trên wiki](https://en.wikipedia.org/wiki/Analytic_hierarchy_process_%E2%80%93_car_example)
+[Nguồn sưu tập trên wiki](https://en.wikipedia.org/wiki/Analytic_hierarchy_process_%E2%80%93_car_example)
 
- ## Dịch não tuỷ (folder `test`)
+## Dịch não tuỷ (folder `./test`)
 
- ### Database (SQLite3)
+### Database (SQLite3)
 
 Sử dụng mô hình EAV để lưu data
 
- ![Image about Entity Relationship Diagram](img/EAV_diagram.png "Entity Relationship Diagram of sicks")
+![Image about Entity Relationship Diagram](img/EAV_diagram.png "Entity Relationship Diagram of sicks")
 
-### Hướng dẫn chạy
+#### Tạo CSDL
 
 Đầu tiên chạy file `./test/sqlite3/init.py` để tạo table `sicks`, `criteria` và `criteria_value` - nếu chưa có file `tutorial.db`.
 Có một vài mẫu query truy vấn trong `./test/sqlite3/query.py`
 
+### Chạy demo (file `./SickSample.py`)
 
+Chỉ số nhất quán (CR) của mỗi tiêu chí (bài cho 5 tiêu chí) sẽ hiển thị ở console.
+Kết quả hiển thị trên giao diện. Ví dụ như sau:
 
+![](img/EAV_diagram.png "Result")
