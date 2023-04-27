@@ -48,13 +48,6 @@ sicks = ('binh-thuong', 'viem-mang-nao-cap-do-vi-khuan',
 
 sicks_pairs = list(itertools.combinations(sicks, 2))
 
-apluc_values_temp = []
-bachcau_values_temp = []
-tbuuthe_values_temp = []
-glucose_values_temp = []
-protein_values_temp = []
-
-
 window = Tk()
 window.title("Test nhập dữ liệu nồng độ đo về dịch não tuỷ")
 window.geometry('410x230')
@@ -72,7 +65,7 @@ txt_bach_cau.grid(column=1, row=1)
 cm_tb_uu_the = Combobox(window)
 cm_tb_uu_the['values']= ("Bạch cầu Lympho (L)", "Bạch cầu đa nhân trung tính (PMN)")
 cm_tb_uu_the.grid(column=1, row=2)
-cm_tb_uu_the.current(1)
+cm_tb_uu_the.current(0)
 tb_uu_the = Label(window, text="Tế bào ưu thế: ")
 tb_uu_the.grid(column=0, row=2)
 
@@ -95,15 +88,21 @@ txt_result.grid(column=1,row=6)
 txt_ap_luc.focus()
 
 def clicked():
+    txt_result.configure(text="")
+    apluc_values_temp = []
+    bachcau_values_temp = []
+    tbuuthe_values_temp = []
+    glucose_values_temp = []
+    protein_values_temp = []
     ap_luc_nb = int(txt_ap_luc.get())
     bach_cau_nb = int(txt_bach_cau.get())
     tb_uu_the_str = "L"
-    if cm_tb_uu_the.current() != "Bạch cầu Lympho (L)": 
+    if cm_tb_uu_the.get() != "Bạch cầu Lympho (L)": 
         tb_uu_the_str = "PMN"
     glucose_nb = int(txt_glucose.get())
     protein_nb = int(txt_protein.get())
     input = [ap_luc_nb, bach_cau_nb, tb_uu_the_str, glucose_nb, protein_nb]
-    
+    print(input)
     for sick in sicks:
         criterias = cal_weight(sick)
         apluc_from_to = criterias[0][1].split("-")
