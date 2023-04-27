@@ -66,4 +66,4 @@ Có một vài mẫu query truy vấn trong `./test/sqlite3/query.py`
 Chỉ số nhất quán (CR) của mỗi tiêu chí (bài cho 5 tiêu chí) sẽ hiển thị ở console.
 Kết quả hiển thị trên giao diện. Ví dụ như sau:
 
-![](img/EAV_diagram.png "Result")
+![](img/Result.png "Result")
