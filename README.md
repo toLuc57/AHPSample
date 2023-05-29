@@ -50,6 +50,23 @@ Câu lệnh trong python in ra kết quả.
 
 ## Dịch não tuỷ (folder `./test`)
 
+### Cách làm
+
+#### So sánh từng cặp tiêu chí với mục tiêu 
+
+Sau khi đánh giá (chủ quan), thì dưới đây là kết quả:
+|Tiêu chí|Trọng số|
+|:-:|:-:|
+|Áp lực (mm)* |0.0315|
+|Bạch cầu/microL*|0.4702|
+|Loại tế bào ưu thế|0.1837|
+|Glucose (mg/dL)|0.1454|
+|Protein(mg/dL)*|0.1692|
+
+#### So sánh từng cặp phương án theo Tiêu chí
+
+Dựa theo kết quả nhập chỉ số đo được mà ta tính ra kết quả
+
 ### Database (SQLite3)
 
 Sử dụng mô hình EAV để lưu data
